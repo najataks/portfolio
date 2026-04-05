@@ -1,13 +1,5 @@
-/**
- * Premium Portfolio - AKASTOUM Najat
- * JavaScript: Animations, Interactions, UX Enhancements
- */
-
 document.addEventListener('DOMContentLoaded', () => {
     
-    // ========================================
-    // LOADER
-    // ========================================
     const loader = document.getElementById('loader');
     
     window.addEventListener('load', () => {
@@ -17,9 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 1200);
     });
     
-    // ========================================
-    // THEME TOGGLE
-    // ========================================
     const themeToggle = document.getElementById('themeToggle');
     const html = document.documentElement;
     
@@ -42,10 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
             themeToggle.style.transform = '';
         }, 150);
     });
-    
-    // ========================================
-    // MOBILE MENU
-    // ========================================
+  
     const mobileToggle = document.getElementById('mobileToggle');
     const mobileMenu = document.getElementById('mobileMenu');
     const mobileOverlay = document.getElementById('mobileOverlay');
@@ -69,9 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
     
-    // ========================================
-    // NAVBAR SCROLL EFFECT
-    // ========================================
+
     const navbar = document.getElementById('navbar');
     
     function handleNavbarScroll() {
@@ -84,10 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     window.addEventListener('scroll', handleNavbarScroll, { passive: true });
     handleNavbarScroll();
-    
-    // ========================================
-    // SMOOTH SCROLL
-    // ========================================
+  
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
@@ -105,10 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
-    
-    // ========================================
-    // ACTIVE NAV LINK
-    // ========================================
+
     const sections = document.querySelectorAll('section[id], header[id]');
     const navLinks = document.querySelectorAll('.nav-link');
     
@@ -131,10 +109,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     
     window.addEventListener('scroll', updateActiveNav, { passive: true });
-    
-    // ========================================
-    // TYPING EFFECT
-    // ========================================
+   
     const typingText = document.querySelector('.typing-text');
     const typingPhrases = [
         'Stage d\'un mois recherché',
@@ -175,10 +150,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     
     setTimeout(typeEffect, 1500);
-    
-    // ========================================
-    // SCROLL ANIMATIONS
-    // ========================================
+
     function initScrollAnimations() {
         const animatedElements = document.querySelectorAll('[data-animate]');
         
@@ -205,9 +177,6 @@ document.addEventListener('DOMContentLoaded', () => {
         animatedElements.forEach(el => observer.observe(el));
     }
     
-    // ========================================
-    // SCROLL TO TOP
-    // ========================================
     const scrollTopBtn = document.getElementById('scrollTop');
     
     function handleScrollTop() {
@@ -222,11 +191,8 @@ document.addEventListener('DOMContentLoaded', () => {
     
     scrollTopBtn.addEventListener('click', () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-    
-    // ========================================
-    // CONTACT FORM
-    // ========================================
+    });    
+ 
     const contactForm = document.getElementById('contactForm');
     
     contactForm?.addEventListener('submit', (e) => {
@@ -249,9 +215,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 1500);
     });
     
-    // ========================================
-    // PARALLAX EFFECT
-    // ========================================
     function handleParallax() {
         const blobs = document.querySelectorAll('.blob');
         const scrollY = window.scrollY;
@@ -264,9 +227,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     window.addEventListener('scroll', handleParallax, { passive: true });
     
-    // ========================================
-    // CONSOLE INFO
-    // ========================================
+ 
     console.log('%c✨ Portfolio Premium', 'font-size: 18px; font-weight: 700; color: #6366f1;');
     console.log('%cAKASTOUM Najat | Génie Informatique', 'font-size: 13px; color: #a1a1aa;');
     console.log('%c🔍 Stage d\'un mois recherché', 'font-size: 12px; color: #22c55e;');
